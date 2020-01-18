@@ -68,7 +68,7 @@
                     <navigationItem key="navigationItem" title="Cities" id="h5z-QZ-uNM">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="XA4-JW-YQ6">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="XeX-i2-3PO"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="XeX-i2-3PO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -233,22 +233,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0B-2d-So9">
-                                <rect key="frame" x="20" y="94" width="335" height="31.5"/>
+                                <rect key="frame" x="20" y="50" width="335" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="London ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XaL-MS-FLB">
-                                <rect key="frame" x="20" y="175.5" width="335" height="34"/>
+                                <rect key="frame" x="20" y="131.5" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBU-Bk-C2d">
-                                <rect key="frame" x="20" y="239.5" width="335" height="30"/>
+                                <rect key="frame" x="20" y="195.5" width="335" height="30"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="ADD">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

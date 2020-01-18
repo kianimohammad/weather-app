@@ -100,6 +100,7 @@ class CityTableViewController: UITableViewController {
     @IBAction func unwindToCityTableVC(_ unwindSegue: UIStoryboardSegue) {
         let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
+        tableView.reloadData()
     }
     
 
