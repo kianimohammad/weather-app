@@ -22,7 +22,7 @@ class WeatherURLManager {
     
     static func getForecastWeatherURL(city: String) -> URL? {
         let city = city.replacingOccurrences(of: " ", with: "%20")
-        let urlString = "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&appid=5822f53158fdf0f22ed4fad25842783b"
+        let urlString = "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&units=metric&appid=5822f53158fdf0f22ed4fad25842783b"
         return URL(string: urlString)
     }
 }

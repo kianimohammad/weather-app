@@ -1,5 +1,5 @@
 //
-//  CityTableViewController.swift
+//  ForecastTableViewController.swift
 //  weather app
 //
 //  Created by Mohammad Kiani on 2020-01-17.
@@ -8,23 +8,50 @@
 
 import UIKit
 
-class CityTableViewController: UITableViewController {
+class ForecastTableViewController: UITableViewController {
 
-//    var cities: [String]?
+    var cityName: String!
+    var forecasts: [ForecastData]!
+    
+    func setCity(city: String) {
+        cityName = city
+        self.title = city
+        
+        if let forecastURL = WeatherURLManager.getForecastWeatherURL(city: city) {
+            let session = URLSession.shared
+            let task = session.dataTask(with: forecastURL) { (data, response, error) in
+                if data != nil {
+                    if let forecastData = try? JSON(data: data!) {
+//                        print(forecastData)
+                        self.loadForecast(data: forecastData)
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    func loadForecast(data: JSON) {
+        forecasts = [ForecastData]()
+        let forecastList = data["list"].arrayValue
+        for json in forecastList {
+            forecasts.append(ForecastData(city: cityName, data: json))
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        cities = ["Toronto", "Hawaii", "Vancouver", "Sydney"]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -36,14 +63,15 @@ class CityTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cities?.count ?? 0
+        return forecasts?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Configure the cell...
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell") as! CityTableViewCell
-        cell.setCity(city: cities?[indexPath.row] ?? "")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell") as!ForecastTableViewCell
+        cell.setForecast(forecast: forecasts[indexPath.row])
+
         return cell
     }
     
@@ -83,24 +111,14 @@ class CityTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
-        if let forecastTableVC = segue.destination as? ForecastTableViewController {
-            let cityIndex = tableView.indexPath(for: sender as! UITableViewCell)
-            forecastTableVC.setCity(city: cities![cityIndex!.row])
-        }
     }
-    
-    @IBAction func unwindToCityTableVC(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source
-        // Use data from the view controller which initiated the unwind segue
-    }
-    
+    */
 
 }

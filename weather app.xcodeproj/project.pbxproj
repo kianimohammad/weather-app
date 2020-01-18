@@ -17,6 +17,9 @@
 		1CB7766423D2709100F8D21F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7766223D2709100F8D21F /* SwiftyJSON.swift */; };
 		1CB7766623D2710B00F8D21F /* WeatherURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7766523D2710B00F8D21F /* WeatherURLManager.swift */; };
 		1CB7766823D274F100F8D21F /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7766723D274F100F8D21F /* CityTableViewCell.swift */; };
+		1CB7766B23D2928900F8D21F /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7766A23D2928900F8D21F /* ForecastData.swift */; };
+		1CB7766D23D296D200F8D21F /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7766C23D296D200F8D21F /* ForecastTableViewController.swift */; };
+		1CB7766F23D298FC00F8D21F /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7766E23D298FC00F8D21F /* ForecastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		1CB7766323D2709100F8D21F /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		1CB7766523D2710B00F8D21F /* WeatherURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherURLManager.swift; sourceTree = "<group>"; };
 		1CB7766723D274F100F8D21F /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		1CB7766A23D2928900F8D21F /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
+		1CB7766C23D296D200F8D21F /* ForecastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
+		1CB7766E23D298FC00F8D21F /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		1CB7764723D26DCF00F8D21F /* weather app */ = {
 			isa = PBXGroup;
 			children = (
+				1CB7766923D2926800F8D21F /* Model */,
 				1CB7765C23D26DE900F8D21F /* Controllenr */,
 				1CB7764823D26DCF00F8D21F /* AppDelegate.swift */,
 				1CB7764A23D26DCF00F8D21F /* SceneDelegate.swift */,
@@ -85,8 +92,18 @@
 				1CB7764C23D26DCF00F8D21F /* ViewController.swift */,
 				1CB7765D23D26E1400F8D21F /* CityTableViewController.swift */,
 				1CB7766723D274F100F8D21F /* CityTableViewCell.swift */,
+				1CB7766C23D296D200F8D21F /* ForecastTableViewController.swift */,
+				1CB7766E23D298FC00F8D21F /* ForecastTableViewCell.swift */,
 			);
 			path = Controllenr;
+			sourceTree = "<group>";
+		};
+		1CB7766923D2926800F8D21F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CB7766A23D2928900F8D21F /* ForecastData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +180,12 @@
 				1CB7765E23D26E1400F8D21F /* CityTableViewController.swift in Sources */,
 				1CB7766823D274F100F8D21F /* CityTableViewCell.swift in Sources */,
 				1CB7764D23D26DCF00F8D21F /* ViewController.swift in Sources */,
+				1CB7766D23D296D200F8D21F /* ForecastTableViewController.swift in Sources */,
 				1CB7766623D2710B00F8D21F /* WeatherURLManager.swift in Sources */,
 				1CB7764923D26DCF00F8D21F /* AppDelegate.swift in Sources */,
+				1CB7766F23D298FC00F8D21F /* ForecastTableViewCell.swift in Sources */,
 				1CB7766423D2709100F8D21F /* SwiftyJSON.swift in Sources */,
+				1CB7766B23D2928900F8D21F /* ForecastData.swift in Sources */,
 				1CB7764B23D26DCF00F8D21F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
