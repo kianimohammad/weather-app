@@ -52,6 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0B6C2D23D2C9B9003D5A0B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1CB7766323D2709100F8D21F /* SwiftyJSON.h */,
+				1CB7766223D2709100F8D21F /* SwiftyJSON.swift */,
+				1CB7766523D2710B00F8D21F /* WeatherURLManager.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1C0B6C2E23D2C9DE003D5A0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CB7764E23D26DCF00F8D21F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1CB7763C23D26DCF00F8D21F = {
 			isa = PBXGroup;
 			children = (
@@ -71,17 +89,15 @@
 		1CB7764723D26DCF00F8D21F /* weather app */ = {
 			isa = PBXGroup;
 			children = (
+				1C0B6C2E23D2C9DE003D5A0B /* View */,
+				1C0B6C2D23D2C9B9003D5A0B /* Support */,
 				1CB7766923D2926800F8D21F /* Model */,
 				1CB7765C23D26DE900F8D21F /* Controllenr */,
 				1CB7764823D26DCF00F8D21F /* AppDelegate.swift */,
 				1CB7764A23D26DCF00F8D21F /* SceneDelegate.swift */,
-				1CB7766323D2709100F8D21F /* SwiftyJSON.h */,
-				1CB7766223D2709100F8D21F /* SwiftyJSON.swift */,
-				1CB7764E23D26DCF00F8D21F /* Main.storyboard */,
 				1CB7765123D26DD100F8D21F /* Assets.xcassets */,
 				1CB7765323D26DD100F8D21F /* LaunchScreen.storyboard */,
 				1CB7765623D26DD100F8D21F /* Info.plist */,
-				1CB7766523D2710B00F8D21F /* WeatherURLManager.swift */,
 			);
 			path = "weather app";
 			sourceTree = "<group>";

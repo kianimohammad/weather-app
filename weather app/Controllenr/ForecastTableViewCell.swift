@@ -32,10 +32,10 @@ class ForecastTableViewCell: UITableViewCell {
     func setForecast(forecast: ForecastData) {
         dateLbl.text = forecast.dateString
         timeLbl.text = forecast.hour
-        highTempLbl.text = forecast.highTemp
-        lowTempLbl.text = forecast.lowTemp
-        tempLbl.text = forecast.dayTemp
-        feelLbl.text = forecast.feelTemp
+        highTempLbl.text = "\(forecast.highTemp)º"
+        lowTempLbl.text = "\(forecast.lowTemp)º"
+        tempLbl.text = "\(forecast.dayTemp)º"
+        feelLbl.text = "\(forecast.feelTemp)º"
         
         loadImage(iconCode: forecast.iconCode)
     }

@@ -39,7 +39,7 @@ class CityTableViewCell: UITableViewCell {
                         self.loadIcon(weatherData: weatherData)
                         // UI is in main thread
                         DispatchQueue.main.async {
-                            self.tempLbl.text = "\(tempValue)"
+                            self.tempLbl.text = "\(tempValue)ºC"
                         }
                     }
                 }

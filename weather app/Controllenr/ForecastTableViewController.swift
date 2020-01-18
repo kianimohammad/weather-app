@@ -15,7 +15,7 @@ class ForecastTableViewController: UITableViewController {
     
     func setCity(city: String) {
         cityName = city
-        self.title = city
+        self.title = city.capitalized
         
         if let forecastURL = WeatherURLManager.getForecastWeatherURL(city: city) {
             let session = URLSession.shared
